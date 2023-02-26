@@ -1,3 +1,14 @@
+:root {
+  --primary: #8C22D6;
+  --pdark: #431066;
+  --pdarker: #3C0E5B;
+  --pdarkerest: #2F0C48;
+  --plight: #ddb8f8;
+  --secondary: #69E41B;
+  --sdark: #53B515;
+  --gridGap: .25rem;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +46,71 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator {
+  margin: 0 auto;
+  background-color: #a66fc0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.displayPanel {
+  margin: 0;
+  color: lime;
+  height: auto;
+  padding: .5rem;
+  text-align: right;
+}
+
+#formulaDisplay{
+  background-color: purple;
+}
+
+#display{
+  background-color: rgb(85, 5, 85);
+}
+
+.calcButton {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+#numberPanel {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  width: calc(150px + var(--gridGap)*2);
+}
+
+#zero, #clear, #equals {
+  grid-column: 1 / span 2;
+  background-color: darkred;
+}
+
+#operationsPanel {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  width: calc(100px + var(--gridGap));
+}
+
+#buttons{
+  display: flex;
+}
+
+.panel {
+  display: grid;
+  grid-gap: var(--gridGap);
+  margin: 5px;
 }
