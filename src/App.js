@@ -229,8 +229,8 @@ class Display extends Component {
   render(){
     return (
       <div>
-        <p className="displayPanel" id="formulaDisplay">{this.props.displayFormula}&nbsp;</p>
-        <p className="displayPanel" id="display">{this.props.displayInput}&nbsp;</p>
+        <p className="displayPanel" id="formulaDisplay">&nbsp;{this.props.displayFormula}</p>
+        <p className="displayPanel" id="display">{this.props.displayInput}</p>
       </div>
     );
   }

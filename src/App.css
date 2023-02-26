@@ -50,6 +50,7 @@
 
 #root {
   display: flex;
+  background-color: var(--plight);
   justify-content: center;
   align-items: center;
   height: 100vh;
